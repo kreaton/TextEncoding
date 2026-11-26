@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>TextEncoding.Core</RootNamespace>
+    <AssemblyName>TextEncoding.Core</AssemblyName>
+    <Description>Text file encoding detection and conversion.</Description>
+  </PropertyGroup>
+
+</Project>

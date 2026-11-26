@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>TextEncoding</RootNamespace>
+    <AssemblyName>TextEncoding</AssemblyName>
+    <Product>TextEncoding</Product>
+    <Authors>Per Hejndorf</Authors>
+    <Copyright>Copyright © 2026 Per Hejndorf</Copyright>
+    <!-- The version is set in Directory.Build.props. -->
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <!-- Allows building on non-Windows machines (CI, Linux). Harmless on Windows. -->
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <!-- Drawn by art/make-icon.cs (dotnet run art/make-icon.cs). -->
+    <ApplicationIcon>..\..\art\icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Also embedded so the windows get every size of the icon, not just the 32 px one Windows extracts. -->
+    <EmbeddedResource Include="..\..\art\icon.ico" LogicalName="TextEncoding.icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TextEncoding.Core\TextEncoding.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Keep in step with the vpk version in .github/workflows/release.yml and BuildRelease.ps1. -->
+    <PackageReference Include="Velopack" Version="1.3.39-g8d2844f" />
+  </ItemGroup>
+
+</Project>
